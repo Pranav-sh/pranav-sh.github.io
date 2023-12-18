@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing head content -->
+
+  <style>
+    /* Your existing CSS */
+
+    /* Additional CSS for card layout and hover effect */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      position: relative;
+      flex: 0 0 calc(30% - 20px);
+      margin: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transition: transform 0.3s ease-out; /* Add smooth transition on hover */
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Scale up on hover for a subtle effect */
+    }
+
+    .card-img-top {
+      max-width: 100%;
+      height: auto;
+      filter: blur(0); /* Initially no blur */
+      transition: filter 0.3s ease-out; /* Add smooth transition on hover */
+    }
+
+    .card:hover .card-img-top {
+      filter: blur(5px); /* Apply blur on hover */
+    }
+
+    .card-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      font-weight: bold;
+      z-index: 1; /* Ensure the header is above the blurred image */
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-text {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <img src="./images/set24.jpg" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Card 2</div>
+      <img src="./images/set24.jpg" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Card 3</div>
+      <img src="./images/set24.jpg" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add any additional overlays, loaders, or scripts as needed for your project -->
+  <script src="https://tympanus.net/Development/Exhibition/js/anime.min.js"></script>
+  <script src="https://tympanus.net/Development/Exhibition/js/imagesloaded.pkgd.min.js"></script>
+  <script src="https://tympanus.net/Development/Exhibition/js/main.js"></script>
+</body>
+</html>
